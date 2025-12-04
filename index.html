@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CQI365Health Project Documentation Index</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f3f4f6;
+        }
+        
+        .doc-card {
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #e5e7eb;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: #3b82f6;
+        }
+
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+        }
+
+        .bg-html { background-color: #e0f2fe; color: #0284c7; } /* Sky blue for HTML */
+        .bg-pdf { background-color: #fee2e2; color: #dc2626; }  /* Red for PDF */
+    </style>
+</head>
+<body class="p-8 min-h-screen">
+
+    <!-- Top Navigation / Actions -->
+    <div class="fixed top-4 right-4 z-50 flex gap-2 no-print">
+        <a href="#" class="bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded shadow hover:bg-gray-50 flex items-center gap-2 font-medium text-sm">
+            <i data-lucide="folder-open" class="w-4 h-4"></i> 開啟 Documents 資料夾
+        </a>
+    </div>
+
+    <div class="container mx-auto max-w-[1000px] bg-white shadow-xl p-8 mb-10 min-h-[800px]">
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-8 border-b-2 border-gray-800 pb-4">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900">Project Documentation</h1>
+                <p class="text-gray-600 mt-1">CQI365Health 專案文件索引中心</p>
+            </div>
+            <div class="text-right text-sm text-gray-500">
+                <p>Path: /documents</p>
+                <p>Filter: *.html, *.pdf</p>
+            </div>
+        </div>
+
+        <!-- File List Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <!-- Item 1: Business Model Canvas (HTML) -->
+            <a href="documents/CQI365Health_Business_Model_Canvas.html" target="_blank" class="doc-card bg-white p-4 rounded-lg flex items-start gap-4 group">
+                <div class="icon-box bg-html group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <i data-lucide="file-code" class="w-6 h-6"></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-gray-800 group-hover:text-blue-700">Business Model Canvas</h3>
+                    <p class="text-xs text-gray-500 mt-1">CQI365Health_Business_Model_Canvas.html</p>
+                    <div class="flex items-center gap-2 mt-2 text-xs text-gray-400">
+                        <span class="bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded">HTML</span>
+                        <span>Latest Update: 2025-12-04</span>
+                    </div>
+                </div>
+                <div class="text-gray-300 group-hover:text-blue-500 self-center">
+                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                </div>
+            </a>
+
+            <!-- Item 2: Strategic System Design (PDF) -->
+            <a href="documents/STRATEGIC_SYSTEM_DESIGN.pdf" target="_blank" class="doc-card bg-white p-4 rounded-lg flex items-start gap-4 group">
+                <div class="icon-box bg-pdf group-hover:bg-red-600 group-hover:text-white transition-colors">
+                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-gray-800 group-hover:text-red-700">Strategic System Design</h3>
+                    <p class="text-xs text-gray-500 mt-1">STRATEGIC_SYSTEM_DESIGN.pdf</p>
+                    <div class="flex items-center gap-2 mt-2 text-xs text-gray-400">
+                        <span class="bg-red-50 text-red-600 px-1.5 py-0.5 rounded">PDF</span>
+                        <span>Strategic Architecture v2.0</span>
+                    </div>
+                </div>
+                <div class="text-gray-300 group-hover:text-red-500 self-center">
+                    <i data-lucide="download" class="w-5 h-5"></i>
+                </div>
+            </a>
+
+            <!-- Item 3: User Journey Map (PDF) -->
+            <a href="documents/USER_JOURNEY.pdf" target="_blank" class="doc-card bg-white p-4 rounded-lg flex items-start gap-4 group">
+                <div class="icon-box bg-pdf group-hover:bg-red-600 group-hover:text-white transition-colors">
+                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-gray-800 group-hover:text-red-700">User Journey Map</h3>
+                    <p class="text-xs text-gray-500 mt-1">USER_JOURNEY.pdf</p>
+                    <div class="flex items-center gap-2 mt-2 text-xs text-gray-400">
+                        <span class="bg-red-50 text-red-600 px-1.5 py-0.5 rounded">PDF</span>
+                        <span>Patient Life-Centric Flow</span>
+                    </div>
+                </div>
+                <div class="text-gray-300 group-hover:text-red-500 self-center">
+                    <i data-lucide="download" class="w-5 h-5"></i>
+                </div>
+            </a>
+
+            <!-- Item 4: Integration Plan (HTML) -->
+            <a href="documents/INTEGRATION_PLAN.html" target="_blank" class="doc-card bg-white p-4 rounded-lg flex items-start gap-4 group">
+                <div class="icon-box bg-html group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <i data-lucide="file-code" class="w-6 h-6"></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-gray-800 group-hover:text-blue-700">Integration Plan</h3>
+                    <p class="text-xs text-gray-500 mt-1">INTEGRATION_PLAN.html</p>
+                    <div class="flex items-center gap-2 mt-2 text-xs text-gray-400">
+                        <span class="bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded">HTML</span>
+                        <span>Dev Roadmap Phase 1-7</span>
+                    </div>
+                </div>
+                <div class="text-gray-300 group-hover:text-blue-500 self-center">
+                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                </div>
+            </a>
+
+        </div>
+        
+        <!-- Empty State / Info -->
+        <div class="mt-12 p-6 bg-gray-50 rounded-lg border border-dashed border-gray-300 text-center">
+            <i data-lucide="folder-search" class="w-8 h-8 text-gray-400 mx-auto mb-2"></i>
+            <p class="text-sm text-gray-500">
+                此頁面監控目錄： <strong>/documents</strong><br>
+                目前僅顯示 HTML 與 PDF 格式文件。
+            </p>
+        </div>
+
+        <div class="mt-8 text-xs text-gray-400 text-center border-t border-gray-100 pt-4">
+            &copy; 2025 CQI365Health Documentation Center.
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
