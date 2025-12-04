@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CQI365Health Business Model Canvas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f3f4f6;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .canvas-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: auto auto auto;
+            gap: 0;
+            border: 2px solid #374151;
+            background-color: white;
+        }
+
+        .cell {
+            border: 1px solid #e5e7eb;
+            padding: 1rem;
+            min-height: 200px;
+            position: relative;
+        }
+
+        .cell-title {
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: #374151;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cell-content {
+            font-size: 0.8rem;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+
+        .cell-content ul {
+            list-style-type: disc;
+            padding-left: 1.2rem;
+        }
+        
+        .cell-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        .cell-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        /* Grid Layout Configuration */
+        .kp { grid-column: 1 / 2; grid-row: 1 / 3; border-right: 2px solid #374151; }
+        .ka { grid-column: 2 / 3; grid-row: 1 / 2; }
+        .kr { grid-column: 2 / 3; grid-row: 2 / 3; }
+        .vp { grid-column: 3 / 4; grid-row: 1 / 3; border-left: 2px solid #374151; border-right: 2px solid #374151; }
+        .cr { grid-column: 4 / 5; grid-row: 1 / 2; }
+        .ch { grid-column: 4 / 5; grid-row: 2 / 3; }
+        .cs { grid-column: 5 / 6; grid-row: 1 / 3; border-left: 2px solid #374151; }
+        .c-cost { grid-column: 1 / 3; grid-row: 3 / 4; border-top: 2px solid #374151; border-right: 2px solid #374151; }
+        .c-rev { grid-column: 3 / 6; grid-row: 3 / 4; border-top: 2px solid #374151; }
+
+        @media print {
+            .no-print { display: none; }
+            body { background-color: white; padding: 0; }
+            .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="no-print fixed top-4 right-4 z-50 flex gap-2">
+        <button onclick="downloadHTML()" class="bg-gray-600 text-white px-4 py-2 rounded shadow hover:bg-gray-700 flex items-center gap-2 font-medium text-sm">
+            <i data-lucide="download" class="w-4 h-4"></i> 下載 HTML
+        </button>
+        <button onclick="window.print()" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 flex items-center gap-2 font-medium text-sm">
+            <i data-lucide="printer" class="w-4 h-4"></i> 列印 / 存為 PDF
+        </button>
+    </div>
+
+    <div class="container mx-auto max-w-[1400px] bg-white shadow-xl p-8 mb-10">
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-6 border-b-2 border-gray-800 pb-4">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900">The Business Model Canvas</h1>
+                <p class="text-gray-600 mt-1">CQI365Health: 慢性腎臟病垂直生態系</p>
+            </div>
+            <div class="text-right text-sm text-gray-500">
+                <p>Designed by: AntiGravity Agent</p>
+                <p>Date: 2025-12-04</p>
+                <p>Version: 2.1 (Ecosystem Strategy)</p>
+            </div>
+        </div>
+
+        <!-- The Canvas Grid -->
+        <div class="canvas-grid">
+            
+            <!-- 8. Key Partnerships (KP) -->
+            <div class="cell kp bg-gray-50">
+                <div class="cell-title">
+                    <i data-lucide="link" class="w-5 h-5"></i>
+                    Key Partnerships (關鍵合作夥伴)
+                </div>
+                <div class="cell-content">
+                    <ul>
+                        <li><strong>早期採用醫療院所:</strong> 協助驗證臨床價值，提供第一批種子用戶。</li>
+                        <li><strong>雲端基礎設施:</strong> Google Cloud Platform / Firebase。</li>
+                        <li><strong>供應鏈夥伴:</strong> 優質的低蛋白米、血壓計、營養品廠商 (商城供貨源)。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 7. Key Activities (KA) -->
+            <div class="cell ka">
+                <div class="cell-title">
+                    <i data-lucide="activity" class="w-5 h-5"></i>
+                    Key Activities (關鍵活動)
+                </div>
+                <div class="cell-content">
+                    <ul>
+                        <li><strong>產品研發:</strong> App UX (零摩擦輸入) 與 AI 準確度優化。</li>
+                        <li><strong>數據運營:</strong> 定義使用者標籤 (Tagging System) 邏輯。</li>
+                        <li><strong>生態系建立 (BD):</strong> 建立診所合作試點，打通轉介通路。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 6. Key Resources (KR) -->
+            <div class="cell kr">
+                <div class="cell-title">
+                    <i data-lucide="database" class="w-5 h-5"></i>
+                    Key Resources (關鍵資源)
+                </div>
+                <div class="cell-content">
+                    <ul>
+                        <li><strong>技術架構:</strong> Firebase Monorepo 生態系。</li>
+                        <li><strong>數據資產:</strong> 標籤化 (Tagged) 病患數據湖。</li>
+                        <li><strong>知識圖譜:</strong> 專有 CKD 飲食/用藥邏輯。</li>
+                        <li><strong>AI 模型:</strong> Gemini 醫療影像解讀。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 1. Value Propositions (VP) -->
+            <div class="cell vp bg-blue-50">
+                <div class="cell-title text-blue-800">
+                    <i data-lucide="gift" class="w-5 h-5"></i>
+                    Value Propositions (價值主張)
+                </div>
+                <div class="cell-content">
+                    <p class="mb-2 text-blue-900 font-bold border-b border-blue-200 pb-1">對病患 (Trust Engine)</p>
+                    <ul>
+                        <li><strong>AI 安全防護網:</strong> 用藥/飲食/腎功能即時交互作用警示。</li>
+                        <li><strong>即時掌控感:</strong> 生理數值 (Vital Signs) 綠色進步指標。</li>
+                        <li><strong>垂直深度:</strong> 專為 CKD 設計的動態營養限制。</li>
+                    </ul>
+                    
+                    <p class="mb-2 mt-4 text-blue-900 font-bold border-b border-blue-200 pb-1">對專業端 (Clinical Bridge)</p>
+                    <ul>
+                        <li><strong>省時高效:</strong> 3分鐘 AI 臨床摘要。</li>
+                        <li><strong>主動預警:</strong> Red Flag Alerts 通知介入。</li>
+                    </ul>
+
+                    <p class="mb-2 mt-4 text-blue-900 font-bold border-b border-blue-200 pb-1">對商業夥伴</p>
+                    <ul>
+                        <li><strong>精準行銷:</strong> 標籤觸發推薦 (Tag-Triggered)。</li>
+                        <li><strong>RWD 數據:</strong> 輔助藥廠研發與保險精算。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. Customer Relationships (CR) -->
+            <div class="cell cr">
+                <div class="cell-title">
+                    <i data-lucide="heart" class="w-5 h-5"></i>
+                    Customer Relationships (客戶關係)
+                </div>
+                <div class="cell-content">
+                    <ul>
+                        <li><strong>AI Copilot:</strong> 24/7 自動化個人健康管家。</li>
+                        <li><strong>數據黏著 (Data Gravity):</strong> 紀錄越多，轉換成本越高。</li>
+                        <li><strong>信任優先:</strong> Loss Leader 策略，初期免費建立依賴。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Channels (CH) -->
+            <div class="cell ch">
+                <div class="cell-title">
+                    <i data-lucide="truck" class="w-5 h-5"></i>
+                    Channels (通路)
+                </div>
+                <div class="cell-content">
+                    <ul>
+                        <li><strong>數位入口:</strong> Mobile App, Web Dashboard.</li>
+                        <li><strong>關鍵通路:</strong> 醫生/衛教師的「處方級推薦」 (Trust Referral)。</li>
+                        <li><strong>內容行銷:</strong> CKD 衛教 SEO 引流。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. Customer Segments (CS) -->
+            <div class="cell cs bg-gray-50">
+                <div class="cell-title">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    Customer Segments (目標客群)
+                </div>
+                <div class="cell-content">
+                    <p class="mb-2 font-bold text-gray-700">核心使用者 (End Users)</p>
+                    <ul>
+                        <li>CKD 第 1-5 期患者。</li>
+                        <li>糖尿病/高血壓共病族群。</li>
+                        <li>病患家屬/照護者。</li>
+                    </ul>
+                    
+                    <p class="mb-2 mt-4 font-bold text-gray-700">專業合作者 (Providers)</p>
+                    <ul>
+                        <li>腎臟科醫師、衛教師、個管師。</li>
+                    </ul>
+
+                    <p class="mb-2 mt-4 font-bold text-gray-700">B2B 客戶</p>
+                    <ul>
+                        <li>藥廠、保險公司、營養品廠商。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 9. Cost Structure (C-Cost) -->
+            <div class="cell c-cost">
+                <div class="cell-title">
+                    <i data-lucide="tag" class="w-5 h-5"></i>
+                    Cost Structure (成本結構)
+                </div>
+                <div class="cell-content grid grid-cols-2 gap-4">
+                    <ul>
+                        <li><strong>研發成本:</strong> 軟體工程師、UI/UX 設計師。</li>
+                        <li><strong>獲客成本:</strong> 行銷推廣與通路建立。</li>
+                    </ul>
+                    <ul>
+                        <li><strong>營運成本:</strong> Firebase 用量、Gemini AI Token。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 5. Revenue Streams (C-Rev) -->
+            <div class="cell c-rev">
+                <div class="cell-title">
+                    <i data-lucide="dollar-sign" class="w-5 h-5"></i>
+                    Revenue Streams (收益流)
+                </div>
+                <div class="cell-content grid grid-cols-2 gap-4">
+                    <div>
+                        <strong>Phase 1: 流量積累</strong>
+                        <ul>
+                            <li>Freemium (核心免費獲客)。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>Phase 2 & 3: 變現</strong>
+                        <ul>
+                            <li><strong>CQI365 Market:</strong> 導購分潤/上架費。</li>
+                            <li><strong>Premium:</strong> 進階報告/無限辨識訂閱。</li>
+                            <li><strong>Intelligence:</strong> B2B 數據授權 (Data Licensing)。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="mt-6 text-xs text-gray-400 text-center">
+            &copy; 2025 CQI365Health. All Rights Reserved. Generated based on Strategic System Design v2.0.
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        function downloadHTML() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'CQI365Health_Business_Model_Canvas.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
