@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CQI365Health Business Model Canvas</title>
+    <title>CQI365Health Business Model Canvas v3.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -27,7 +27,7 @@
         .cell {
             border: 1px solid #e5e7eb;
             padding: 1rem;
-            min-height: 200px;
+            min-height: 220px; /* Slightly taller for more content */
             position: relative;
         }
 
@@ -45,22 +45,46 @@
         .cell-content {
             font-size: 0.8rem;
             color: #4b5563;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .cell-content ul {
-            list-style-type: disc;
-            padding-left: 1.2rem;
+            list-style-type: none;
+            padding-left: 0;
         }
         
         .cell-content li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1rem;
         }
 
-        .cell-content strong {
-            color: #1f2937;
-            font-weight: 600;
+        .cell-content li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3b82f6; /* Blue bullets */
         }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 3px solid #3b82f6;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+        }
+
+        .strategic-tag {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-right: 4px;
+        }
+        
+        .tag-red { background-color: #fee2e2; color: #991b1b; } /* Moat/Niche */
+        .tag-green { background-color: #dcfce7; color: #166534; } /* Revenue */
 
         /* Grid Layout Configuration */
         .kp { grid-column: 1 / 2; grid-row: 1 / 3; border-right: 2px solid #374151; }
@@ -96,12 +120,12 @@
         <div class="flex justify-between items-end mb-6 border-b-2 border-gray-800 pb-4">
             <div>
                 <h1 class="text-3xl font-bold text-gray-900">The Business Model Canvas</h1>
-                <p class="text-gray-600 mt-1">CQI365Health: 慢性腎臟病垂直生態系</p>
+                <p class="text-gray-600 mt-1">CQI365Health v3.0: 針對 CKD 共病族群的 AI 決策防護網</p>
             </div>
             <div class="text-right text-sm text-gray-500">
-                <p>Designed by: AntiGravity Agent</p>
-                <p>Date: 2025-12-04</p>
-                <p>Version: 2.1 (Ecosystem Strategy)</p>
+                <p>Strategy: 不對稱作戰 (Asymmetric Warfare)</p>
+                <p>Focus: 共病衝突解決 & 家庭照護賦能</p>
+                <p>Date: 2025-12-05</p>
             </div>
         </div>
 
@@ -116,9 +140,10 @@
                 </div>
                 <div class="cell-content">
                     <ul>
-                        <li><strong>早期採用醫療院所:</strong> 協助驗證臨床價值，提供第一批種子用戶。</li>
-                        <li><strong>雲端基礎設施:</strong> Google Cloud Platform / Firebase。</li>
-                        <li><strong>供應鏈夥伴:</strong> 優質的低蛋白米、血壓計、營養品廠商 (商城供貨源)。</li>
+                        <li><strong>腎臟科/高齡醫學診所:</strong> 提供第一批種子用戶 (精準受眾)。</li>
+                        <li><strong>Google Cloud / Firebase:</strong> 技術基礎設施。</li>
+                        <li><strong>特殊營養品供應鏈:</strong> 低蛋白米、低磷鉀食品 (不同於一般糖尿病食品)。</li>
+                        <li><strong>子女/照護者社群:</strong> 口碑傳播節點。</li>
                     </ul>
                 </div>
             </div>
@@ -131,9 +156,9 @@
                 </div>
                 <div class="cell-content">
                     <ul>
-                        <li><strong>產品研發:</strong> App UX (零摩擦輸入) 與 AI 準確度優化。</li>
-                        <li><strong>數據運營:</strong> 定義使用者標籤 (Tagging System) 邏輯。</li>
-                        <li><strong>生態系建立 (BD):</strong> 建立診所合作試點，打通轉介通路。</li>
+                        <li><span class="strategic-tag tag-red">Core</span><strong>共病演算法優化:</strong> 解決「腎臟病 vs 糖尿病」飲食建議的矛盾。</li>
+                        <li><strong>AI 安全網訓練:</strong> 強化藥物交互作用與禁忌症辨識 (Safety Net)。</li>
+                        <li><strong>醫病溝通介面:</strong> 優化 PDF 報告的臨床易讀性。</li>
                     </ul>
                 </div>
             </div>
@@ -146,10 +171,9 @@
                 </div>
                 <div class="cell-content">
                     <ul>
-                        <li><strong>技術架構:</strong> Firebase Monorepo 生態系。</li>
-                        <li><strong>數據資產:</strong> 標籤化 (Tagged) 病患數據湖。</li>
-                        <li><strong>知識圖譜:</strong> 專有 CKD 飲食/用藥邏輯。</li>
-                        <li><strong>AI 模型:</strong> Gemini 醫療影像解讀。</li>
+                        <li><span class="strategic-tag tag-red">Moat</span><strong>CKD 專屬知識圖譜:</strong> 包含動態 eGFR 營養限制邏輯。</li>
+                        <li><strong>多模態 AI 引擎:</strong> 視覺辨識藥袋/報告/食物的能力。</li>
+                        <li><strong>Monorepo 架構:</strong> 支援家庭帳號與醫生端同步。</li>
                     </ul>
                 </div>
             </div>
@@ -161,23 +185,28 @@
                     Value Propositions (價值主張)
                 </div>
                 <div class="cell-content">
-                    <p class="mb-2 text-blue-900 font-bold border-b border-blue-200 pb-1">對病患 (Trust Engine)</p>
+                    
+                    <div class="highlight-box">
+                        <strong>⚔️ 對抗智抗糖的利基：</strong><br>
+                        不做單一維度控糖，專注解決「共病衝突」。
+                    </div>
+
+                    <p class="mb-1 text-blue-900 font-bold">1. 共病衝突仲裁者 (Conflict Resolver)</p>
                     <ul>
-                        <li><strong>AI 安全防護網:</strong> 用藥/飲食/腎功能即時交互作用警示。</li>
-                        <li><strong>即時掌控感:</strong> 生理數值 (Vital Signs) 綠色進步指標。</li>
-                        <li><strong>垂直深度:</strong> 專為 CKD 設計的動態營養限制。</li>
+                        <li>解決「控糖要吃糙米」但「護腎不能吃糙米」的矛盾焦慮。</li>
+                        <li>針對 eGFR 自動調整營養建議。</li>
                     </ul>
                     
-                    <p class="mb-2 mt-4 text-blue-900 font-bold border-b border-blue-200 pb-1">對專業端 (Clinical Bridge)</p>
+                    <p class="mb-1 mt-3 text-blue-900 font-bold">2. 主動式 AI 安全網 (Safety Net)</p>
                     <ul>
-                        <li><strong>省時高效:</strong> 3分鐘 AI 臨床摘要。</li>
-                        <li><strong>主動預警:</strong> Red Flag Alerts 通知介入。</li>
+                        <li>即時攔截傷腎藥物 (如 NSAIDs)。</li>
+                        <li>提供「保命級」的交互作用警示。</li>
                     </ul>
 
-                    <p class="mb-2 mt-4 text-blue-900 font-bold border-b border-blue-200 pb-1">對商業夥伴</p>
+                    <p class="mb-1 mt-3 text-blue-900 font-bold">3. 零門檻賦能 (Zero Hardware)</p>
                     <ul>
-                        <li><strong>精準行銷:</strong> 標籤觸發推薦 (Tag-Triggered)。</li>
-                        <li><strong>RWD 數據:</strong> 輔助藥廠研發與保險精算。</li>
+                        <li><strong>不需要買藍牙機器</strong>。</li>
+                        <li>透過「3分鐘 AI 摘要報告」賦能病人，讓醫生成為推廣者。</li>
                     </ul>
                 </div>
             </div>
@@ -190,9 +219,9 @@
                 </div>
                 <div class="cell-content">
                     <ul>
-                        <li><strong>AI Copilot:</strong> 24/7 自動化個人健康管家。</li>
-                        <li><strong>數據黏著 (Data Gravity):</strong> 紀錄越多，轉換成本越高。</li>
-                        <li><strong>信任優先:</strong> Loss Leader 策略，初期免費建立依賴。</li>
+                        <li><span class="strategic-tag tag-green">New</span><strong>家庭連結 (Filial Connection):</strong> 滿足子女的「孝心」與「監控需求」。</li>
+                        <li><strong>信任依賴:</strong> 透過解決複雜的飲食焦慮建立權威感。</li>
+                        <li><strong>Streak 機制:</strong> 利用遊戲化維持每日黏著度。</li>
                     </ul>
                 </div>
             </div>
@@ -205,9 +234,9 @@
                 </div>
                 <div class="cell-content">
                     <ul>
-                        <li><strong>數位入口:</strong> Mobile App, Web Dashboard.</li>
-                        <li><strong>關鍵通路:</strong> 醫生/衛教師的「處方級推薦」 (Trust Referral)。</li>
-                        <li><strong>內容行銷:</strong> CKD 衛教 SEO 引流。</li>
+                        <li><strong>實體病毒擴散:</strong> 病人手持的 PDF 報告 (讓醫生看到)。</li>
+                        <li><strong>子女社群:</strong> PTT/Facebook 照護社團 (精準行銷付費者)。</li>
+                        <li><strong>腎臟科衛教:</strong> 針對 CKD Stage 3b+ 的精準轉介。</li>
                     </ul>
                 </div>
             </div>
@@ -219,21 +248,15 @@
                     Customer Segments (目標客群)
                 </div>
                 <div class="cell-content">
-                    <p class="mb-2 font-bold text-gray-700">核心使用者 (End Users)</p>
+                    <p class="mb-1 font-bold text-gray-700">核心使用者 (End Users)</p>
                     <ul>
-                        <li>CKD 第 1-5 期患者。</li>
-                        <li>糖尿病/高血壓共病族群。</li>
-                        <li>病患家屬/照護者。</li>
+                        <li><strong>CKD + 糖尿病/高血壓 共病患者</strong> (最焦慮、最需要仲裁的一群)。</li>
+                        <li>65歲以上，不擅長操作複雜介面的長輩。</li>
                     </ul>
                     
-                    <p class="mb-2 mt-4 font-bold text-gray-700">專業合作者 (Providers)</p>
+                    <p class="mb-1 mt-4 font-bold text-gray-700">核心付費者 (The Payer)</p>
                     <ul>
-                        <li>腎臟科醫師、衛教師、個管師。</li>
-                    </ul>
-
-                    <p class="mb-2 mt-4 font-bold text-gray-700">B2B 客戶</p>
-                    <ul>
-                        <li>藥廠、保險公司、營養品廠商。</li>
+                        <li><strong>焦慮的子女 (Caregivers):</strong> 35-55歲，擔心父母亂吃藥/亂吃東西，願意付費買「安心」。</li>
                     </ul>
                 </div>
             </div>
@@ -246,11 +269,8 @@
                 </div>
                 <div class="cell-content grid grid-cols-2 gap-4">
                     <ul>
-                        <li><strong>研發成本:</strong> 軟體工程師、UI/UX 設計師。</li>
-                        <li><strong>獲客成本:</strong> 行銷推廣與通路建立。</li>
-                    </ul>
-                    <ul>
-                        <li><strong>營運成本:</strong> Firebase 用量、Gemini AI Token。</li>
+                        <li><strong>AI Token 成本:</strong> 透過 Hybrid AI (BYOK) 策略控制。</li>
+                        <li><strong>研發成本:</strong> 專注於軟體，無硬體庫存壓力。</li>
                     </ul>
                 </div>
             </div>
@@ -263,17 +283,16 @@
                 </div>
                 <div class="cell-content grid grid-cols-2 gap-4">
                     <div>
-                        <strong>Phase 1: 流量積累</strong>
+                        <strong>1. 家庭照護訂閱 (Family Plan)</strong>
                         <ul>
-                            <li>Freemium (核心免費獲客)。</li>
+                            <li>子女付費，監控父母健康數據與異常警示 (Peace of Mind)。</li>
                         </ul>
                     </div>
                     <div>
-                        <strong>Phase 2 & 3: 變現</strong>
+                        <strong>2. 精準市集與數據</strong>
                         <ul>
-                            <li><strong>CQI365 Market:</strong> 導購分潤/上架費。</li>
-                            <li><strong>Premium:</strong> 進階報告/無限辨識訂閱。</li>
-                            <li><strong>Intelligence:</strong> B2B 數據授權 (Data Licensing)。</li>
+                            <li>Tag-Triggered 導購 (低蛋白米等)。</li>
+                            <li>B2B RWD 數據服務。</li>
                         </ul>
                     </div>
                 </div>
@@ -282,7 +301,7 @@
         </div>
         
         <div class="mt-6 text-xs text-gray-400 text-center">
-            &copy; 2025 CQI365Health. All Rights Reserved. Generated based on Strategic System Design v2.0.
+            &copy; 2025 CQI365Health. Strategy v3.0: The Comorbidity Specialist.
         </div>
     </div>
 
@@ -295,7 +314,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'CQI365Health_Business_Model_Canvas.html';
+            a.download = 'CQI365Health_BMC_v3.html';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
